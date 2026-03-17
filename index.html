@@ -1,0 +1,222 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Toolbox</title>
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
+  <!-- Add this header bar at the top of the <body> -->
+  <div style="
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px 18px 40px;
+    background: #4682b4;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  ">
+    <span style="color: #fff; font-size: 2rem; font-weight: bold;">QE – AI Toolbox Hub</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Icon" id="userIcon" style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
+  </div>
+  <!-- Replace the duplicate header and description block with this, below the top bar -->
+  <!-- Centre align main title and description -->
+  <div style="width: 100%; max-width: 900px; margin-top: 30px; margin-bottom: 10px; text-align: center;">
+    <h1 style="font-weight: bold; font-size: 2.2rem; color: #35424a; margin-bottom: 10px;">AI Toolbox Hub</h1>
+    <h3 style="font-weight: normal; font-size: 1.2rem; color: #333; margin-top: 0;">
+      A centralized platform for QE professionals SOS access AI-powered tools.
+    </h3>
+  </div>
+  <div style="text-align: center; margin-top: 15px; width: 100%;">
+    <input type="text" id="searchInput" placeholder="Search tools..." style="width: 70vw; max-width: 900px; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;" onkeyup="filterWidgets()">
+  </div>
+  <div id="widgetsGrid" style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  ">
+    <!-- Each widget tile below gets a data-name attribute for searching -->
+    <div data-name="Test case creation" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Test case creation</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Create test cases efficiently</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+    <div data-name="Test case execution" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Test case execution</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Execute test cases seamlessly</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+    <div data-name="Test Plan" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Test Plan</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Manage your test plans</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+    <div data-name="Test completion Report" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Test completion Report</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">View completion reports</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+    <div data-name="Release notes" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Release notes</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Access release notes</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+    <div data-name="Code Analysis" style="background: rgb(240, 248, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 30px 40px; min-width: 280px; text-align: center; border: 1px solid rgb(135, 206, 235); display: flex; flex-direction: column; align-items: center;">
+      <h2 style="color: #35424a; margin-bottom: 10px;">Code Analysis</h2>
+      <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">Analyze code</p>
+      <a href="https://www.google.com" target="_blank" style="text-decoration: none;">
+        <button style="
+          background: #87ceeb;
+          color: #fff;
+          border: none;
+          padding: 10px 24px;
+          border-radius: 6px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background 0.2s;
+        ">
+          Open
+        </button>
+      </a>
+    </div>
+  </div>
+  <div id="userPopup" style="display: none; position: absolute; top: 70px; right: 50px; background: rgb(255, 255, 255); color: rgb(51, 51, 51); border: 1px solid rgb(221, 221, 221); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px; padding: 16px 24px; z-index: 1000; min-width: 220px;">
+    <div style="margin-bottom: 10px;">
+      <strong>User Name:</strong> Swetha.Kenchappa<br>
+      <strong>Email:</strong> swetha.kenchappa@email.com
+    </div>
+    <button onclick="logoutUser()" style="background:#e8491d; color:#fff; border:none; padding:8px 18px; border-radius:6px; font-size:1rem; cursor:pointer;">Log Out</button>
+  </div>
+  <script>
+function filterWidgets() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const widgets = document.querySelectorAll('#widgetsGrid > div[data-name]');
+  let anyVisible = false;
+  widgets.forEach(widget => {
+    const name = widget.getAttribute('data-name').toLowerCase();
+    if (name.includes(input)) {
+      widget.style.display = 'flex';
+      anyVisible = true;
+    } else {
+      widget.style.display = 'none';
+    }
+  });
+  let msg = document.getElementById('noResultsMsg');
+  if (!anyVisible) {
+    if (!msg) {
+      msg = document.createElement('div');
+      msg.id = 'noResultsMsg';
+      msg.style = 'width:100%; text-align:center; color:#e8491d; font-size:1.2rem; margin-top:20px;';
+      msg.textContent = 'No matching tools found.';
+      document.getElementById('widgetsGrid').parentNode.insertBefore(msg, document.getElementById('widgetsGrid').nextSibling);
+    }
+  } else {
+    if (msg) msg.remove();
+  }
+}
+
+document.getElementById('userIcon').onclick = function() {
+  const popup = document.getElementById('userPopup');
+  popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+};
+// Optional: Hide popup when clicking outside
+document.addEventListener('click', function(e) {
+  const popup = document.getElementById('userPopup');
+  const icon = document.getElementById('userIcon');
+  if (popup.style.display === 'block' && !popup.contains(e.target) && e.target !== icon) {
+    popup.style.display = 'none';
+  }
+});
+
+function logoutUser() {
+  alert('You have been logged out.');
+  document.getElementById('userPopup').addEventListener('click', function() {
+    window.location.href = 'login.html'; // Opens the login page
+  });
+}
+
+  </script>
+  <div id="root"></div>
+  <!-- The React app will be injected into #root -->
+  <script src="../src/index.js"></script>
+
+  <footer class="footer" style="margin-top: 40px; text-align: match-parent
+  ;">
+    <p>By using AI Toolbox Hub, you agree to the privacy policy, terms of use, and permissions.</p>
+    <p>© 2025 AI Toolbox Hub. All rights reserved.</p>
+  </footer>
+
+</body></html>
